@@ -132,5 +132,49 @@ export const places: Place[] = [
         "/images/old-town-shop.png": "Curio shops selling antiques, silver jewelry, and fabric.",
         "/images/old-town-temple.png": "The cultural melting pot: A Hindu temple nestled between mosques."
     }
+  },
+
+  {
+    id: "butterfly-pavilion",
+    title: "Butterfly Pavilion",
+    description: "A reclaimed paradise. Where cement quarries once stood, now butterflies dance in the cool forest air. The perfect escape for picnics, cycling, and silence.",
+    poster: "/images/pavillion.png", // Ensure this is a high-res, beautiful image
+
+    videoUrls: [], // Empty, so our page logic will handle this!
+
+    imageUrls: [
+        "/images/pavillion-antellope.png",
+        "/images/pavillion-bike.png",
+        "/images/pavillion-forest1.png",
+        "/images/pavillion-lake.png",
+        "/images/pavillion-lake2.png",
+        "/images/pavillion-forest2.png",
+        "/images/pavillion-forest3.png",
+        "/images/pavillion-picnic.png",
+        "/images/pavillion-playground.png",
+        "/images/pavillion-road.png",
+        "/images/pavillion-tortoise.png",
+    ],
+    
+    // Captions tell the story of "Activities"
+    imageCaptions: {
+        "/images/pavillion-bike.png": "Miles of shaded cycling trails through the forest.",
+        "/images/pavillion-picnic.png": "Dedicated picnic spots for families and groups.",
+        "/images/pavillion-lake.png": "The tranquil wetlands - home to diverse birdlife.",
+        "/images/pavillion-antellope.png": "Spot the shy coastal antelopes in the bush.",
+        "/images/pavillion-playground.png": "Jungle gyms and swings for the little ones."
+    },
+
+    // History focuses on "Reclamation"
+    history: [
+        { year: "1990s", event: "The Reclamation", detail: "Following the success of Haller Park, Bamburi Cement began rehabilitating this southern quarry." },
+        { year: "2000s", event: "Biodiversity", detail: "Indigenous coastal forests were planted to create a micro-climate for butterflies." },
+        { year: "Today", event: "The Green Lung", detail: "It serves as a vital cooling zone and recreational space for Mombasa's residents." }
+    ],
+
+    google360Urls: [
+      "https://www.google.com/maps/embed?pb=!4v1766484379945!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRDYyZi1FR1E.!2m2!1d-3.988836989817182!2d39.73460538606753!3f100!4f20!5f0.7820865974627469",
+      "https://www.google.com/maps/embed?pb=!4v1766484560388!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ2s5cEQtWlE.!2m2!1d-3.988836989817182!2d39.73460538606753!3f49.30755314663281!4f-8.5686639448043!5f0.7820865974627469",
+    ],
   }
 ];
