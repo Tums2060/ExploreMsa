@@ -5,6 +5,12 @@ export type Place = {
   title: string;
   description: string;
   poster: string;
+  storyChapters?: {
+    title: string;
+    heading: string;
+    text: string;
+    image: string;
+  }[];
   videoUrls: string[];
   imageUrls: string[];
   google360Urls: string[];
@@ -176,5 +182,61 @@ export const places: Place[] = [
       "https://www.google.com/maps/embed?pb=!4v1766484379945!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRDYyZi1FR1E.!2m2!1d-3.988836989817182!2d39.73460538606753!3f100!4f20!5f0.7820865974627469",
       "https://www.google.com/maps/embed?pb=!4v1766484560388!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ2s5cEQtWlE.!2m2!1d-3.988836989817182!2d39.73460538606753!3f49.30755314663281!4f-8.5686639448043!5f0.7820865974627469",
     ],
+  },
+
+  {
+    id: "bombolulu-workshop",
+    title: "Bombolulu Workshop",
+    description: "More than a workshop. A rhythm of life. Watch raw materials turn into art, and feel the ground shake with the beat of the traditional dancers.",
+    poster: "/images/bombolulu-entrance.png",
+
+    videoUrls: [
+      "/videos/bombolulu-dancing.mp4",
+    ],
+
+    imageUrls: [
+      "/images/bombolulu-entrance2.png",
+      "/images/bombolulu-bags.png",
+      "/images/bombolulu-clothes.png",
+      "/images/bombolulu-craftsmen.png",
+      "/images/bombolulu-dancers.png",
+      "/images/bombolulu-dancers2.png",
+      "/images/bombolulu-giftshop.png",
+      "/images/bombolulu-huts.png",
+      "/images/bombolulu-huts2.png",
+      "/images/bombolulu-woodencrafts.png",
+    ],
+
+    google360Urls: [
+      "https://www.google.com/maps/embed?pb=!4v1766568361240!6m8!1m7!1stRbA4ynnWsvPyo3KenqXHQ!2m2!1d-4.022081754090665!2d39.70198475472508!3f53.711908558518196!4f5.851984880484579!5f0.7820865974627469",
+    ],
+
+    // NEW: "GTA Style" Story Chapters for Scrollytelling
+    storyChapters: [
+        {
+            title: "The Village",
+            heading: "Walk Through Kenya",
+            text: "Before you see the art, you see the life. The center features 8 traditional homesteads (Manyattas), each representing a different tribe of Kenya. It is a rare chance to walk from a Maasai hut to a Giriama compound in a hundred steps.",
+            image: "/images/bombolulu-huts.png"
+        },
+        {
+            title: "The Hands",
+            heading: "Alchemy in Motion",
+            text: "This is the heartbeat of the project. Over 100 artisans with disabilities transforming 'junk' into treasure. Old car radiators become polished aluminum jewelry. Wood scraps become intricate carvings. You don't just buy a souvenir; you witness its birth.",
+            image: "/images/bombolulu-craftsmen.png"
+        },
+        {
+            title: "The Pulse",
+            heading: "Rhythm of the Coast",
+            text: "When the work stops, the drums start. The Bombolulu Dancers are world-famous. You will feel the percussion in your chest as they perform the Sengenya and Gonda dances. It is loud, it is colorful, and it is impossible to sit still.",
+            image: "/images/bombolulu-dancers.png"
+        }
+    ],
+
+    imageCaptions: {
+        "/images/bombolulu-bags.png": "Hand-stitched Kitenge fabric bags.",
+        "/images/bombolulu-clothes.png": "Tailoring section: Where vibrant patterns meet modern cuts.",
+        "/images/bombolulu-woodencrafts.png": "Mahogany masterpieces carved by hand."
+    }
   }
 ];
