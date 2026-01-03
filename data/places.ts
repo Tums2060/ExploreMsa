@@ -21,6 +21,11 @@ export type Place = {
     detail: string;
   }[];
   imageCaptions?: Record<string, string>; // Maps specific image URLs to text
+
+  // NEW FEATURES
+  youtubeVideoIds?: string[]; // For embedding YouTube directly
+  locationEmbedUrl?: string;  // For the Google Map at the bottom
+  priceInfo?: { title: string; price: string; }[]; // Structured pricing
 };
 
 export const places: Place[] = [
@@ -238,5 +243,59 @@ export const places: Place[] = [
         "/images/bombolulu-clothes.png": "Tailoring section: Where vibrant patterns meet modern cuts.",
         "/images/bombolulu-woodencrafts.png": "Mahogany masterpieces carved by hand."
     }
-  }
+  },
+
+  {
+    id: "wild-waters",
+    title: "Wild Waters",
+    description: "The ultimate adrenaline rush. Kenya's largest waterpark features 15 thrilling slides, a lazy river, and a rain dance arena. It is the perfect escape from the coastal heat.",
+    poster: "/images/wildwaters-arielview.png",
+
+    videoUrls: [
+      "/videos/wildwaters1.mp4",
+      "/videos/wildwaters2.mp4",
+      "/videos/wildwaters3.mp4",
+    ],
+
+    // NEW: The YouTube IDs extracted from your links
+    youtubeVideoIds: [
+        "gBIiSFdGGqg", // Drone view
+        "tGtD5qr7QBE", // Slide action
+        "jyrhsXKfgAo"  // General vibe
+    ],
+
+    imageUrls: [
+      "/images/wildwaters-arielview2.png",
+      "/images/wildwaters-arielview3.png",
+      "/images/wildwaters-arielview4.png",
+      "/images/wildwaters-arielview5.png",
+      "/images/wildwaters-arielview6.png",
+      "/images/wildwaters-entrance.png",
+      "/images/wildwaters-poolview.png",
+      "/images/wildwaters-poolview2.png",
+      "/images/wildwaters-slideview.png",
+      "/images/wildwaters-slideview2.png",
+    ],
+
+    imageCaptions: {
+        "/images/wildwaters-slideview.png": "The Spirals: High-speed twisting tubes.",
+        "/images/wildwaters-poolview.png": "The Wave Pool: Experience the ocean without the salt.",
+        "/images/wildwaters-arielview5.png": "Kids Zone: Safe splashing for the little ones."
+    },
+
+    // NEW: Pricing Structure
+    priceInfo: [
+        { title: "Adults (Full Day)", price: "1,700 KES" },
+        { title: "Children (Full Day)", price: "1,400 KES" },
+        { title: "Spectator (No Swimming)", price: "500 KES" }
+    ],
+
+    google360Urls: [
+      "https://www.google.com/maps/embed?pb=!4v1767426580405!6m8!1m7!1sEFLgP1xTCgpErgz-ZTqBiQ!2m2!1d-4.040460563319411!2d39.70450954029019!3f309.56739477367984!4f9.723231700480554!5f0.7820865974627469",
+      "https://www.google.com/maps/embed?pb=!4v1767426633222!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ2s0TUgyTlE.!2m2!1d-4.039392424902289!2d39.70406591828223!3f40!4f20!5f0.7820865974627469",
+    ],
+
+    // NEW: Google Maps Embed Link (Location)
+    locationEmbedUrl: "https://maps.google.com/maps?q=Wild+Waters+Mombasa&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  },
 ];
